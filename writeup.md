@@ -29,10 +29,20 @@ Save the following three files into the data folder of the cloned repository.
 Achieve the Accuracy of .40:
 
 Created FCNN by adjusting the hyper paramters ( epochs, batches, steps for epoch, validations for epoch)
-Get the data(images) for training and validation from the simulator with and without the hero.
-Train the Model on AWS udacity's ami.
-Verify the final score for accuracy
-Running the model in the simulator to follow the hero.
+
+  Get the data(images) for training and validation from the simulator with and without the hero.
+  Train the Model on AWS udacity's ami.
+  Verify the final score for accuracy
+  Running the model in the simulator to follow the hero.
 
 Follow Me in Simulator
 ![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/follow-me-sim.PNG)
+
+## Data:
+Used the data provided by the udacity and gather some more data from simulator with following aspects:
+  1) Following the hero in dense crowd
+  2) Patroling only on hero
+  3) Quad on standard patrol
+
+## Model
+
