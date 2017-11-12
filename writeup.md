@@ -30,13 +30,13 @@ $ git clone https://github.com/udacity/RoboND-DeepLearning.git
 Download the data
 
 Save the following three files into the data folder of the cloned repository. 
-
+```
 [Training Data](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Lab/train.zip) 
 
 [Validation Data](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Lab/validation.zip)
 
 [Sample Evaluation Data](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Project/sample_evaluation_data.zip)
-
+```
 
 Achieve the Accuracy of .40:
 
