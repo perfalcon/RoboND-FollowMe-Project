@@ -9,13 +9,25 @@ Steps followed :
 3) Train the Neural Network to acheive more than .40 accuracy.
 5) Test the trained data in the Simulator.
 
-## Setup Instructions
-**Clone the repository**
+## Setup Environment
+
+Setup AWS Instance:
+```
+  https://classroom.udacity.com/nanodegrees/nd209/parts/09664d24-bdec-4e64-897a-d0f55e177f09/modules/cac27683-d5f4-40b4-82ce-d708de8f5373/lessons/197a058e-44f6-47df-8229-0ce633e0a2d0/concepts/27c73209-5d7b-4284-8315-c0e07a7cd87f
+```
+
+Download Simulator
+```
+https://github.com/udacity/RoboND-DeepLearning-Project/releases/tag/v1.2.2
+```
+
+Get the Project Frame work from github:
+
 ```
 $ git clone https://github.com/udacity/RoboND-DeepLearning.git
 ```
 
-**Download the data**
+Download the data
 
 Save the following three files into the data folder of the cloned repository. 
 
