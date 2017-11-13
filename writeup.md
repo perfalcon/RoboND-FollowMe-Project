@@ -103,12 +103,22 @@ The `separable_conv2d_batchnorm` calls the `SeparableConv2DKeras` and then does 
 *Decode the Layer/s:*
 In this step following operations are performed:
 * Bilinear UpSampling:
-  This is one of the way to implement the upsampling.
-  This technique utilizes the weighted average of four nearest known pixels, located diagonally to a given pixel, to estimate a new pixel intensity value. The weighted average is usually distance dependent.
+
+This is one of the way to implement the upsampling.
+This technique utilizes the weighted average of four nearest known pixels, located diagonally to a given pixel, to estimate a new pixel intensity value. The weighted average is usually distance dependent.
+This is implemented by `bilinear_upsample`
+```
+def bilinear_upsample(input_layer):
+    output_layer = BilinearUpSampling2D((2,2))(input_layer)
+    return output_layer
+```
  
 * A layer concatenation step
+
 This step is similar to skip connections. we will concatenate the upsampled small_ip_layer and the large_ip_layer.
+This is implemented by `layers.concatenate`
 
 * Additional Separable Convolutions
-  This is done to extract some more spatial information from prior layers
+
+This is done to extract some more spatial information from prior layers and implemented by `separable_conv2d_batchnorm`
 
