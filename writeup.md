@@ -222,6 +222,10 @@ IOU 0.579276809932
 Follow Me in Simulator
 ![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/follow-me-sim.PNG)
 
+**Code `Model Jupyter Notebook ![code](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/scripts/model_training.ipynb)`**
+**Weights `Trained weights ![weights](https://github.com/perfalcon/RoboND-FollowMe-Project/tree/master/weights)`**
+
+
 ## Imporvements ##
 * Want to build and train with different set of images for other types of object like, animals, moving vehicles 
 
