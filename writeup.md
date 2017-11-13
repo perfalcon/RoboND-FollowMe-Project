@@ -182,7 +182,44 @@ There are three different predictions available from the helper code provided:
 | ------------- |:-------------:|
 | ![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/following-target.PNG) | ![No Target](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-without-target.PNG) |
 
-| Prediction while the Target at a distance       |       |
-| ------------- | :-------:|
-| ![Target a Distance](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-with-target.PNG) |   |
+| Prediction while the Target at a distance       |
+| ------------- | 
+| ![Target a Distance](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-with-target.PNG) | 
 
+## Evaluation ##
+The scores for the above predictions :
+**Scores for while the quad is following behind the target**
+```
+number of validation samples intersection over the union evaulated on 542
+average intersection over union for background is 0.9953953783924273
+average intersection over union for other people is 0.3687066701416392
+average intersection over union for the hero is 0.9101514501130293
+number true positives: 539, number false positives: 0, number false negatives: 0
+```
+**Scores for images while the quad is on patrol and the target is not visable**
+```
+number of validation samples intersection over the union evaulated on 270
+average intersection over union for background is 0.988607098705327
+average intersection over union for other people is 0.7642755767950153
+average intersection over union for the hero is 0.0
+number true positives: 0, number false positives: 63, number false negatives: 0
+
+```
+**Scores for images while quad is on patrol and the target is at a distance **
+```
+number of validation samples intersection over the union evaulated on 322
+average intersection over union for background is 0.9966889879590972
+average intersection over union for other people is 0.4561759249143874
+average intersection over union for the hero is 0.2484021697518587
+number true positives: 143, number false positives: 1, number false negatives: 158
+
+```
+** Sum all the true positives, etc from the three datasets to get a weight for the score **
+```
+Weight = 0.754424778761062
+```
+**The IoU for the dataset that never includes the hero is excluded from grading **
+```
+IOU 0.579276809932
+```
+**Final grade score is `0.437020779175` **
