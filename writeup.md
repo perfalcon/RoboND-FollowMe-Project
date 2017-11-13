@@ -37,18 +37,6 @@ Save the following three files into the data folder of the cloned repository.
 
 [Sample Evaluation Data](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Project/sample_evaluation_data.zip)
 
-Achieve the Accuracy of .40:
-
-Created FCNN by adjusting the hyper paramters ( epochs, batches, steps for epoch, validations for epoch)
-
-  Get the data(images) for training and validation from the simulator with and without the hero.
-  Train the Model on AWS udacity's ami.
-  Verify the final score for accuracy
-  Running the model in the simulator to follow the hero.
-
-Follow Me in Simulator
-![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/follow-me-sim.PNG)
-
 
 ## Data:
 Used the data provided by the udacity and gather some more data from simulator with following aspects:
@@ -58,6 +46,10 @@ Used the data provided by the udacity and gather some more data from simulator w
 
 ## Model ##
 This FCN model consists of  encoders layers, 1 x 1 convolution  and decoder  layers  to build the semantic segmentation. 
+Below is the architecture for the model:
+
+![FCN Model](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/fcn-model.PNG)
+
 ### Step 1: ###
 *Encode the Layer/s:*
 Encoding does the separable convolution operation with ReLU activation and then batch normalization.
@@ -188,6 +180,7 @@ There are three different predictions available from the helper code provided:
 
 ## Evaluation ##
 The scores for the above predictions :
+
 **Scores for while the quad is following behind the target**
 ```
 number of validation samples intersection over the union evaulated on 542
@@ -205,7 +198,7 @@ average intersection over union for the hero is 0.0
 number true positives: 0, number false positives: 63, number false negatives: 0
 
 ```
-**Scores for images while quad is on patrol and the target is at a distance **
+**Scores for images while quad is on patrol and the target is at a distance**
 ```
 number of validation samples intersection over the union evaulated on 322
 average intersection over union for background is 0.9966889879590972
@@ -214,12 +207,21 @@ average intersection over union for the hero is 0.2484021697518587
 number true positives: 143, number false positives: 1, number false negatives: 158
 
 ```
-** Sum all the true positives, etc from the three datasets to get a weight for the score **
+**Sum all the true positives, etc from the three datasets to get a weight for the score**
 ```
 Weight = 0.754424778761062
 ```
-**The IoU for the dataset that never includes the hero is excluded from grading **
+**The IoU for the dataset that never includes the hero is excluded from grading**
 ```
 IOU 0.579276809932
 ```
-**Final grade score is `0.437020779175` **
+**Final grade score is `0.437020779175`**
+
+
+**Run the model in the simulator**
+Follow Me in Simulator
+![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/follow-me-sim.PNG)
+
+## Imporvements ##
+* Want to build and train with different set of images for other types of object like, animals, moving vehicles 
+
