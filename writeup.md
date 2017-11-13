@@ -49,6 +49,7 @@ Created FCNN by adjusting the hyper paramters ( epochs, batches, steps for epoch
 Follow Me in Simulator
 ![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/follow-me-sim.PNG)
 
+
 ## Data:
 Used the data provided by the udacity and gather some more data from simulator with following aspects:
   1) Following the hero in dense crowd
@@ -152,4 +153,21 @@ Trained the model in the AWS Udacity's AMI instance with provided data from udac
 * steps_per_epoch: number of batches of training images that go through the network in each epoch.
 * validation_steps: number of batches of validation images that go through the network in each epoch. 
 * workers: maximum number of processes to spin up.
+
+Arrived the required accuracy for the model with the following values for the HyperParameters based on the pervious exercises and trails in this model.
+```
+learning_rate = 0.005
+batch_size = 64
+num_epochs = 20
+steps_per_epoch = 400
+validation_steps = 50
+workers = 2
+```
+Below is the Training curves images:
+
+| Training curve at Epoch -2        | Training curve at Epoch -20  |
+| ------------- |:-------------:|
+| ![epoch2](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/graph-epoch-2.PNG) | ![epoch20](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/graph-epoch-20.PNG) |
+
+
 
