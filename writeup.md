@@ -122,3 +122,34 @@ This is implemented by `layers.concatenate`
 
 This is done to extract some more spatial information from prior layers and implemented by `separable_conv2d_batchnorm`
 
+
+### FCN Model:###
+Created the FCN with three encoders, then a 1x1 convolution, then three decoders and then apply a convolution with an activation of softmax.
+
+```
+def fcn_model(inputs, num_classes):
+    # Encoder Layers
+    layer1 = encoder_block(inputs, 32, strides=2)
+    layer2 = encoder_block(layer1, 64, strides=2)
+    layer3 = encoder_block(layer2, 64, strides=2)
+    # 1x1 Convolution layer using conv2d_batchnorm().
+    condv2d_batchnormed = conv2d_batchnorm(layer3, 64, kernel_size=1, strides=1)
+    # Addedsame number of Decoder Blocks as the number of Encoder Blocks
+    layer4 = decoder_block(condv2d_batchnormed,layer2,64)
+    layer5 = decoder_block(layer4,layer1,64)
+    x = decoder_block(layer5,inputs,32)
+    
+    # The function returns the output layer of your model. "x" is the final layer obtained from the last decoder_block()
+    return layers.Conv2D(num_classes, 1, activation='softmax', padding='same')(x)
+```
+
+## Training ##
+Trained the model in the AWS Udacity's AMI instance with provided data from udacity and collected data from simulator.
+
+*HyperParameters*
+* batch_size: number of training samples/images that get propagated through the network in a single pass.
+* num_epochs: number of times the entire training dataset gets propagated through the network.
+* steps_per_epoch: number of batches of training images that go through the network in each epoch.
+* validation_steps: number of batches of validation images that go through the network in each epoch. 
+* workers: maximum number of processes to spin up.
+
