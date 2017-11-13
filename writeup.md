@@ -67,10 +67,10 @@ The reduction in the parameters make separable convolutions quite efficient with
 Batch Normalizaion:
 Batch normalization is the process of normalizing the inputs to layers within the network, instead of just normalizing the inputs to the network. It's called "batch" normalization because during training, we normalize each layer's inputs by using the mean and variance of the values in the current mini-batch. This is has following advantages :
  
-  Networks train faster
-  Allows higher Learning rates
-  Simplifies the creation of  deeper networks
-  Provides a bit of regularization.
+  * Networks train faster
+  * Allows higher Learning rates
+  * Simplifies the creation of  deeper networks
+  * Provides a bit of regularization.
   
   
 
