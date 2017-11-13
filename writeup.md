@@ -30,13 +30,12 @@ $ git clone https://github.com/udacity/RoboND-DeepLearning.git
 Download the data
 
 Save the following three files into the data folder of the cloned repository. 
-```
+
 [Training Data](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Lab/train.zip) 
 
 [Validation Data](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Lab/validation.zip)
 
 [Sample Evaluation Data](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Project/sample_evaluation_data.zip)
-```
 
 Achieve the Accuracy of .40:
 
@@ -67,6 +66,7 @@ The reduction in the parameters make separable convolutions quite efficient with
 
 Batch Normalizaion:
 Batch normalization is the process of normalizing the inputs to layers within the network, instead of just normalizing the inputs to the network. It's called "batch" normalization because during training, we normalize each layer's inputs by using the mean and variance of the values in the current mini-batch. This is has following advantages :
+ 
   Networks train faster
   Allows higher Learning rates
   Simplifies the creation of  deeper networks
