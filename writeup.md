@@ -170,4 +170,19 @@ Below is the Training curves images:
 | ![epoch2](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/graph-epoch-2.PNG) | ![epoch20](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/graph-epoch-20.PNG) |
 
 
+## Prediction ##
+The predictions can be compared to the mask images, which are the ground truth labels, to evaluate how well the model is doing under different conditions.
+
+There are three different predictions available from the helper code provided:
+- **patrol_with_targ**: Test how well the network can detect the hero from a distance.
+- **patrol_non_targ**: Test how often the network makes a mistake and identifies the wrong person as the target.
+- **following_images**: Test how well the network can identify the target while following them.
+
+| Prediction following the Target        | Prediction without Target  |
+| ------------- |:-------------:|
+| ![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/following-target.PNG) | ![No Target](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-without-target.PNG) |
+
+| Prediction while the Target at a distance       | 
+| ------------- |
+| ![Target a Distance](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-with-target.PNG) |
 
