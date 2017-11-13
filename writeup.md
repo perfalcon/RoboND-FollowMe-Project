@@ -229,6 +229,12 @@ Follow Me in Simulator
 [Weights Trained weights](https://github.com/perfalcon/RoboND-FollowMe-Project/tree/master/weights)
 
 
+** Using this Model for Other Objects **
+
+We cannot use this model for identifying other objects like dog, cat, car, etc., as we have trained this model specically to recognize the human objects ( hero , other people and everything is one segment). Inorder to identigy other objects, we have gather those data(images), classify them accordingly and segment them.
+
+
+
 ## Imporvements ##
 * Want to build and train with different set of images for other types of object like, animals, moving vehicles 
 
