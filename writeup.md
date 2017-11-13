@@ -182,7 +182,7 @@ There are three different predictions available from the helper code provided:
 | ------------- |:-------------:|
 | ![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/following-target.PNG) | ![No Target](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-without-target.PNG) |
 
-| Prediction while the Target at a distance       | 
-| ------------- |
-| ![Target a Distance](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-with-target.PNG) |
+| Prediction while the Target at a distance       |       |
+| ------------- | :-------:|
+| ![Target a Distance](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-with-target.PNG) |   |
 
