@@ -63,12 +63,12 @@ It does the separable convolution operation with ReLU activation and then batch 
 
 *Separable Convolution:*
 
-...The Separable convolution is a technique that reduces the number of parameters needed.
+The Separable convolution is a technique that reduces the number of parameters needed.
 The reduction in the parameters make separable convolutions quite efficient with improved runtime performance and are also, as a result, useful for mobile applications. They also have the added benefit of reducing overfitting to an extent, because of the fewer parameters.
 
 *Batch Normalizaion:*
 
-...Batch normalization is the process of normalizing the inputs to layers within the network, instead of just normalizing the inputs to the network. It's called "batch" normalization because during training, we normalize each layer's inputs by using the mean and variance of the values in the current mini-batch. This is has following advantages :
+Batch normalization is the process of normalizing the inputs to layers within the network, instead of just normalizing the inputs to the network. It's called "batch" normalization because during training, we normalize each layer's inputs by using the mean and variance of the values in the current mini-batch. This is has following advantages :
  
   * Networks train faster
   * Allows higher Learning rates
@@ -76,18 +76,28 @@ The reduction in the parameters make separable convolutions quite efficient with
   * Provides a bit of regularization.
   
 This encoder block calls the `separable_conv2d_batchnorm` :
-  `def encoder_block(input_layer, filters, strides):
+ ```
+  def encoder_block(input_layer, filters, strides):
     output_layer = separable_conv2d_batchnorm(input_layer, filters, strides)
     return output_layer`
- 
+ ```
 The `separable_conv2d_batchnorm` calls the `SeparableConv2DKeras` and then does the batch normalization : `layers.BatchNormalization`
- `def separable_conv2d_batchnorm(input_layer, filters, strides=1):
+ ```
+ def separable_conv2d_batchnorm(input_layer, filters, strides=1):
     output_layer = SeparableConv2DKeras(filters=filters,kernel_size=3, strides=strides,padding='same', activation='relu')(input_layer)
     output_layer = layers.BatchNormalization()(output_layer) 
     return output_layer`
+```
 
-
-asdfa
+### Step 2: ###
+ Then apply the 1 x 1 convolution with `conv2d_batchnorm` which does a 1 x 1 convolution with ReLU activation and then the batch normalization.
+ ```
+ def conv2d_batchnorm(input_layer, filters, kernel_size=3, strides=1):
+    output_layer = layers.Conv2D(filters=filters, kernel_size=kernel_size, strides=strides, 
+                      padding='same', activation='relu')(input_layer)
+    output_layer = layers.BatchNormalization()(output_layer) 
+    return output_layer
+ ```
   
 
 
