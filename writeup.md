@@ -60,25 +60,31 @@ This FCN model consists of  encoders layers, 1 x 1 convolution  and decoder  lay
 ### Step 1: ###
 *Encode Layer:*
 It does the separable convolution operation with ReLU activation and then batch normalization.
+
 *Separable Convolution:*
-The Separable convolution is a technique that reduces the number of parameters needed.
+
+...The Separable convolution is a technique that reduces the number of parameters needed.
 The reduction in the parameters make separable convolutions quite efficient with improved runtime performance and are also, as a result, useful for mobile applications. They also have the added benefit of reducing overfitting to an extent, because of the fewer parameters.
 
 *Batch Normalizaion:*
-Batch normalization is the process of normalizing the inputs to layers within the network, instead of just normalizing the inputs to the network. It's called "batch" normalization because during training, we normalize each layer's inputs by using the mean and variance of the values in the current mini-batch. This is has following advantages :
+
+...Batch normalization is the process of normalizing the inputs to layers within the network, instead of just normalizing the inputs to the network. It's called "batch" normalization because during training, we normalize each layer's inputs by using the mean and variance of the values in the current mini-batch. This is has following advantages :
  
   * Networks train faster
   * Allows higher Learning rates
   * Simplifies the creation of  deeper networks
   * Provides a bit of regularization.
   
-`code()
-asd
-asd
-asd
-
-
-`  
+This encoder block calls the `separable_conv2d_batchnorm` :
+  `def encoder_block(input_layer, filters, strides):
+    output_layer = separable_conv2d_batchnorm(input_layer, filters, strides)
+    return output_layer`
+ 
+The `separable_conv2d_batchnorm` calls the `SeparableConv2DKeras` and then does the batch normalization : `layers.BatchNormalization`
+ `def separable_conv2d_batchnorm(input_layer, filters, strides=1):
+    output_layer = SeparableConv2DKeras(filters=filters,kernel_size=3, strides=strides,padding='same', activation='relu')(input_layer)
+    output_layer = layers.BatchNormalization()(output_layer) 
+    return output_layer`
 
 
 asdfa
