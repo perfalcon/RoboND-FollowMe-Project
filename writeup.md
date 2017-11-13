@@ -48,7 +48,7 @@ Used the data provided by the udacity and gather some more data from simulator w
 This FCN model consists of  encoders layers, 1 x 1 convolution  and decoder  layers  to build the semantic segmentation. 
 Below is the architecture for the model:
 
-![FCN Model](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/fcn-model.png)
+![FCN Model](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/fcn-model.PNG)
 
 ### Step 1: ###
 *Encode the Layer/s:*
