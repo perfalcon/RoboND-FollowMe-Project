@@ -61,7 +61,7 @@ The reduction in the parameters make separable convolutions quite efficient with
 
 *Batch Normalizaion:*
 
-Batch normalization is the process of normalizing the inputs to layers within the network, instead of just normalizing the inputs to the network. It's called "batch" normalization because during training, we normalize each layer's inputs by using the mean and variance of the values in the current mini-batch. This is has following advantages :
+Batch normalization is the process of normalizing the inputs to layers within the network, instead of just normalizing the inputs to the network. It's called "batch" normalization because during training, we normalize each layer's inputs by using the mean and variance of the values in the current mini-batch. This has following advantages :
  
   * Networks train faster
   * Allows higher Learning rates
@@ -146,7 +146,7 @@ Trained the model in the AWS Udacity's AMI instance with provided data from udac
 * validation_steps: number of batches of validation images that go through the network in each epoch. 
 * workers: maximum number of processes to spin up.
 
-Arrived the required accuracy for the model with the following values for the HyperParameters based on the pervious exercises and trails in this model.
+Arrived the required final score for the model with the following values for the HyperParameters based on the pervious exercises and trails in this model.
 ```
 learning_rate = 0.005
 batch_size = 64
