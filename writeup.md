@@ -1,7 +1,7 @@
 ### Project: Follow Me
 
 ### Write Up
-In this project created a Deep Neural Network - a Fully Convolution Dee[Neural Network to train the images from the simulator to identify a specific target herein after is referred to as "hero". Classified the hero from others using two different colors of pixels one for hero and other for all others using the sematic segmentation.
+In this project created a Deep Neural Network - a Fully Convolution Deep Neural Network to train the images from the simulator to identify a specific target (called hero). Classified the hero from others using two different colors of pixels one for hero and second color for all others using the sematic segmentation.
 
 Steps followed :
 1) Set up the environment 
@@ -38,7 +38,7 @@ Save the following three files into the data folder of the cloned repository.
 [Sample Evaluation Data](https://s3-us-west-1.amazonaws.com/udacity-robotics/Deep+Learning+Data/Project/sample_evaluation_data.zip)
 
 
-## Data:
+## Data Collection
 Used the data provided by the udacity and gather some more data from simulator with following aspects:
   1) Following the hero in dense crowd
   2) Patroling only on hero
@@ -116,7 +116,7 @@ This is implemented by `layers.concatenate`
 This is done to extract some more spatial information from prior layers and implemented by `separable_conv2d_batchnorm`
 
 
-### FCN Model:###
+### FCN Model ###
 Created the FCN with three encoders, then a 1x1 convolution, then three decoders and then apply a convolution with an activation of softmax.
 
 ```
