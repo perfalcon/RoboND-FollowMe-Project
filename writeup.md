@@ -6,7 +6,7 @@ In this project created a Deep Neural Network - a Fully Convolution Deep Neural 
 Steps followed :
 1) Set up the environment 
 2) Get Data
-3) Train the Neural Network to acheive more than .40 accuracy.
+3) Train the Neural Network to acheive more than .40 final score.
 5) Test the trained data in the Simulator.
 
 ## Setup Environment
