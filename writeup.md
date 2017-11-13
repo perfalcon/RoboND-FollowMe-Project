@@ -231,7 +231,7 @@ Follow Me in Simulator
 
 **Using this Model for Other Objects**
 
-We cannot use this model for identifying other objects like dog, cat, car, etc., as we have trained this model specically to recognize the human objects ( hero , other people and everything is one segment). Inorder to identigy other objects, we have gather those data(images), classify them accordingly and segment them.
+We cannot use this model for identifying other objects like dog, cat, car, etc., as we have trained this model specically to recognize the human objects ( hero , other people and everything is one segment). Inorder to identify other objects, we have tp gather those data(images), classify them accordingly, train and segment them.
 
 
 
