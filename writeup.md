@@ -58,8 +58,8 @@ Used the data provided by the udacity and gather some more data from simulator w
 ## Model ##
 This FCN model consists of  encoders layers, 1 x 1 convolution  and decoder  layers  to build the semantic segmentation. 
 ### Step 1: ###
-*Encode Layer:*
-It does the separable convolution operation with ReLU activation and then batch normalization.
+*Encode the Layer/s:*
+Encoding does the separable convolution operation with ReLU activation and then batch normalization.
 
 *Separable Convolution:*
 
@@ -99,5 +99,16 @@ The `separable_conv2d_batchnorm` calls the `SeparableConv2DKeras` and then does 
     return output_layer
  ```
   
+### Step 3: ###
+*Decode the Layer/s:*
+In this step following operations are performed:
+* Bilinear UpSampling:
+  This is one of the way to implement the upsampling.
+  This technique utilizes the weighted average of four nearest known pixels, located diagonally to a given pixel, to estimate a new pixel intensity value. The weighted average is usually distance dependent.
+ 
+* A layer concatenation step
+This step is similar to skip connections. we will concatenate the upsampled small_ip_layer and the large_ip_layer.
 
+* Additional Separable Convolutions
+  This is done to extract some more spatial information from prior layers
 
