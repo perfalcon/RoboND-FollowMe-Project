@@ -48,7 +48,7 @@ Used the data provided by the udacity and gather some more data from simulator w
 This FCN model consists of  encoders layers, 1 x 1 convolution  and decoder  layers  to build the semantic segmentation. 
 Below is the architecture for the model:
 
-![FCN Model](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/fcn-model.PNG)
+![FCN Model](./images/fcn-model.PNG)
 
 ### Step 1: ###
 *Encoder*
@@ -88,6 +88,10 @@ The `separable_conv2d_batchnorm` calls the `SeparableConv2DKeras` and then does 
 
 ### Step 2: ###
  Then apply the 1 x 1 convolution with `conv2d_batchnorm` which does a 1 x 1 convolution with ReLU activation and then the batch normalization.
+ 
+The 1 by 1 convolution preserves the spatial information, because when the fully connected layer is applied there is a loss of spatial information, because no information about the location of the pixels is preserved.
+
+ 
  ```
  def conv2d_batchnorm(input_layer, filters, kernel_size=3, strides=1):
     output_layer = layers.Conv2D(filters=filters, kernel_size=kernel_size, strides=strides, 
@@ -202,7 +206,7 @@ Below is the Training curves images:
 
 | Training curve at Epoch -2        | Training curve at Epoch -20  |
 | ------------- |:-------------:|
-| ![epoch2](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/graph-epoch-2.PNG) | ![epoch20](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/graph-epoch-20.PNG) |
+| ![epoch2](./images/graph-epoch-2.PNG) | ![epoch20](./images/graph-epoch-20.PNG) |
 
 
 ## Prediction ##
@@ -215,11 +219,11 @@ There are three different predictions available from the helper code provided:
 
 | Prediction following the Target        | Prediction without Target  |
 | ------------- |:-------------:|
-| ![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/following-target.PNG) | ![No Target](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-without-target.PNG) |
+| ![follow me](./images/following-target.PNG) | ![No Target](./images/patrol-without-target.PNG) |
 
 | Prediction while the Target at a distance       |
 | ------------- | 
-| ![Target a Distance](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/patrol-with-target.PNG) | 
+| ![Target a Distance](./images/patrol-with-target.PNG) | 
 
 ## Evaluation ##
 The scores for the above predictions :
@@ -263,13 +267,13 @@ IOU 0.579276809932
 
 **Run the model in the simulator**
 Follow Me in Simulator
-![follow me](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/follow-me-sim.PNG)
+![follow me](./images/follow-me-sim.PNG)
 
 
-[Code for model](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/scripts/model_training.ipynb)
+[Code for model](./scripts/model_training.ipynb)
 
 
-[Weights Trained weights](https://github.com/perfalcon/RoboND-FollowMe-Project/tree/master/weights)
+[Weights Trained weights](./weights)
 
 
 **Using this Model for Other Objects**
