@@ -53,7 +53,7 @@ Below is the architecture for the model:
 ### Step 1: ###
 *Encoder*
 
-The Encoder extracts the features, applies the 2d convolutions and apply the batch normalization.
+The Encoder extracts the features by applying the 2d convolutions and the batch normalization.
 
 *Encode the Layer/s:*
 Encoding does the separable convolution operation with ReLU activation and then batch normalization.
@@ -98,8 +98,10 @@ The `separable_conv2d_batchnorm` calls the `SeparableConv2DKeras` and then does 
   
 ### Step 3: ###
 *Decoder*
-Decoder upscales the ouptut such that it is same size of the Image.
-This process consists of the following three techniques:
+
+Decoder upscales the output such that it is same size of the Image by retaining the spatial information.
+
+This process consists of the following techniques:
 * UpSampling through Bilinear UpSampling
 * Skip Connections
 
@@ -117,11 +119,17 @@ def bilinear_upsample(input_layer):
 ```
  
 * Skip Connections
+
 Skip connections is a great way to retain some of the finer details from the previous layers as we decode or upsample the layers to the original size. 
+
 It is a process of combining the output with non-adjacent layers.
+
 As I know off, this can be implemented in two ways - element wise addition of two layers and concatenation of two layers.
+
 The element wise addition of two layers needs to have same depth of the two layers.
+
 The Concatenation of two layers, provides a flexibility, that it need not be the same depth of the layers.
+
 Here concatenated the upsampled small_ip_layer and the large_ip_layer.
 `layers.concatenate([sampled_layer, large_ip_layer])`
 
