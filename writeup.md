@@ -51,6 +51,10 @@ Below is the architecture for the model:
 ![FCN Model](https://github.com/perfalcon/RoboND-FollowMe-Project/blob/master/images/fcn-model.PNG)
 
 ### Step 1: ###
+*Encoder*
+
+The Encoder extracts the features, applies the 2d convolutions and apply the batch normalization.
+
 *Encode the Layer/s:*
 Encoding does the separable convolution operation with ReLU activation and then batch normalization.
 
@@ -93,6 +97,12 @@ The `separable_conv2d_batchnorm` calls the `SeparableConv2DKeras` and then does 
  ```
   
 ### Step 3: ###
+*Decoder*
+Decoder upscales the ouptut such that it is same size of the Image.
+This process consists of the following three techniques:
+* UpSampling through Bilinear UpSampling
+* Skip Connections
+
 *Decode the Layer/s:*
 In this step following operations are performed:
 * Bilinear UpSampling:
@@ -106,10 +116,14 @@ def bilinear_upsample(input_layer):
     return output_layer
 ```
  
-* A layer concatenation step
-
-This step is similar to skip connections. we will concatenate the upsampled small_ip_layer and the large_ip_layer.
-This is implemented by `layers.concatenate`
+* Skip Connections
+Skip connections is a great way to retain some of the finer details from the previous layers as we decode or upsample the layers to the original size. 
+It is a process of combining the output with non-adjacent layers.
+As I know off, this can be implemented in two ways - element wise addition of two layers and concatenation of two layers.
+The element wise addition of two layers needs to have same depth of the two layers.
+The Concatenation of two layers, provides a flexibility, that it need not be the same depth of the layers.
+Here concatenated the upsampled small_ip_layer and the large_ip_layer.
+`layers.concatenate([sampled_layer, large_ip_layer])`
 
 * Additional Separable Convolutions
 
@@ -117,6 +131,13 @@ This is done to extract some more spatial information from prior layers and impl
 
 
 ### FCN Model ###
+*Fully Convolution Layer*
+This consists of three techniques:
+1) Replace Fully Connected Layers with 1 x 1 Convolution Layer
+2) UpSampling the output to the same size of the Image.
+3) Skip connections to retain some of the finer details from the pervious layers.
+
+
 Created the FCN with three encoders, then a 1x1 convolution, then three decoders and then apply a convolution with an activation of softmax.
 
 ```
