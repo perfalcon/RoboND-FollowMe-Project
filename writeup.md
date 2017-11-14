@@ -105,6 +105,21 @@ This process consists of the following techniques:
 * UpSampling through Bilinear UpSampling
 * Skip Connections
 
+Implemented through `decoder_block`
+
+```
+def decoder_block(small_ip_layer, large_ip_layer, filters):
+    
+    # Upsample the small input layer using the bilinear_upsample() function.
+    sampled_layer = bilinear_upsample(small_ip_layer)
+    #Concatenate the upsampled and large input layers using layers.concatenate
+    cat_layer = layers.concatenate([sampled_layer, large_ip_layer])
+    # Add some number of separable convolution layers
+    conv_layer = separable_conv2d_batchnorm(cat_layer, filters)
+    output_layer = separable_conv2d_batchnorm(conv_layer, filters)
+    return output_layer
+ ```
+
 *Decode the Layer/s:*
 In this step following operations are performed:
 * Bilinear UpSampling:
@@ -125,9 +140,7 @@ Skip connections is a great way to retain some of the finer details from the pre
 It is a process of combining the output with non-adjacent layers.
 
 As I know off, this can be implemented in two ways - element wise addition of two layers and concatenation of two layers.
-
 The element wise addition of two layers needs to have same depth of the two layers.
-
 The Concatenation of two layers, provides a flexibility, that it need not be the same depth of the layers.
 
 Here concatenated the upsampled small_ip_layer and the large_ip_layer.
@@ -136,6 +149,7 @@ Here concatenated the upsampled small_ip_layer and the large_ip_layer.
 * Additional Separable Convolutions
 
 This is done to extract some more spatial information from prior layers and implemented by `separable_conv2d_batchnorm`
+
 
 
 ### FCN Model ###
@@ -260,7 +274,7 @@ Follow Me in Simulator
 
 **Using this Model for Other Objects**
 
-We cannot use this model for identifying other objects like dog, cat, car, etc., as we have trained this model specically to recognize the human objects ( hero , other people and everything is one segment). Inorder to identify other objects, we have tp gather those data(images), classify them accordingly, train and segment them.
+We cannot use this model for identifying other objects like dog, cat, car, etc., as we have trained this model specically to recognize the human objects ( hero , other people and everything is one segment). Inorder to identify other objects, we have to gather those data(images), classify them accordingly, train and segment them.
 
 
 
