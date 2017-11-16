@@ -209,6 +209,24 @@ Below is the Training curves images:
 | ![epoch2](./images/graph-epoch-2.PNG) | ![epoch20](./images/graph-epoch-20.PNG) |
 
 
+|HyerPer Parameters   | Final Score   |Training Curve at Epoch -20   |
+|---|---|---|
+| learning_rate = 0.05
+batch_size = 20
+num_epochs = 10
+steps_per_epoch = 100
+validation_steps = 20
+workers = 2
+
+
+Final Score: 0.30291113035
+             |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+|   |   |   |
+
 ## Prediction ##
 The predictions can be compared to the mask images, which are the ground truth labels, to evaluate how well the model is doing under different conditions.
 
