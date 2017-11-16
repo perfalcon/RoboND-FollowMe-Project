@@ -211,21 +211,16 @@ Below is the Training curves images:
 
 |HyerPer Parameters   | Final Score   |Training Curve at Epoch -20   |
 |---|---|---|
-| learning_rate = 0.05
-batch_size = 20
-num_epochs = 10
-steps_per_epoch = 100
-validation_steps = 20
-workers = 2
+| ![Run1](./images/parameters-pics/Run1.PNG)|Final Score: 0.30291113035|![Run1](./images/parameters-pics/Run1-Graph.PNG)   |
+| ![Run2](./images/parameters-pics/Run2.PNG)|Final Score: 0.30291113035|![Run2](./images/parameters-pics/Run2-Graph.PNG)   |
+| ![Run3](./images/parameters-pics/Run3.PNG)|Final Score: 0.30291113035|![Run3](./images/parameters-pics/Run3-Graph.PNG)   |
+| ![Run4](./images/parameters-pics/Run4.PNG)|Final Score: 0.30291113035|![Run4](./images/parameters-pics/Run4-Graph.PNG)   |
+| ![Run5](./images/parameters-pics/Run5.PNG)|Final Score: 0.30291113035|![Run5](./images/parameters-pics/Run5-Graph.PNG)   |
+| ![Run6](./images/parameters-pics/Run6.PNG)|Final Score: 0.30291113035|![Run6](./images/parameters-pics/Run6-Graph.PNG)   |
+| ![Run7](./images/parameters-pics/Run7.PNG)|Final Score: 0.30291113035|![Run7](./images/parameters-pics/Run7-Graph.PNG)   |
+| ![Run8](./images/parameters-pics/Run8.PNG)|Final Score: 0.30291113035|![Run8](./images/parameters-pics/Run8-Graph.PNG)   |
+| ![Run9](./images/parameters-pics/Run9.PNG)|Final Score: 0.30291113035|![Run9](./images/parameters-pics/Run9-Graph.PNG)   |
 
-
-Final Score: 0.30291113035
-             |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
-|   |   |   |
 
 ## Prediction ##
 The predictions can be compared to the mask images, which are the ground truth labels, to evaluate how well the model is doing under different conditions.
