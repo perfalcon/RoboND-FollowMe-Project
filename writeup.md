@@ -89,7 +89,9 @@ The `separable_conv2d_batchnorm` calls the `SeparableConv2DKeras` and then does 
 ### Step 2: ###
  Then apply the 1 x 1 convolution with `conv2d_batchnorm` which does a 1 x 1 convolution with ReLU activation and then the batch normalization.
  
-The 1 by 1 convolution preserves the spatial information, because when the fully connected layer is applied there is a loss of spatial information, because no information about the location of the pixels is preserved. With this we can know where is the specific object in the Image.
+The 1 by 1 convolution preserves the spatial information, but when the fully connected layer is applied there is a loss of spatial information, because no information about the location of the pixels is preserved. With this we can know where is the specific object in the Image.
+
+We know 'there is a cat in the scene(Image)' and with this 1x1 Convolution we will know 'where the cat is in the scene(Image)'
 
  
  ```
