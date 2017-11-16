@@ -211,15 +211,15 @@ Below is the Training curves images:
 
 |HyerPer Parameters   | Final Score   |Training Curve at Epoch -20   |
 |---|---|---|
-| ![Run1](./images/parameters-pics/Run1.PNG)|0.30291113035|![Run1](./images/parameters-pics/Run1-Graph.PNG)   |
-| ![Run2](./images/parameters-pics/Run2.PNG)|0.352162249037|![Run2](./images/parameters-pics/Run2-Graph.PNG)   |
-| ![Run3](./images/parameters-pics/Run3.PNG)|0.441323278424|![Run3](./images/parameters-pics/Run3-Graph.PNG)   |
-| ![Run4](./images/parameters-pics/Run4.PNG)|0.419950640633|![Run4](./images/parameters-pics/Run4-Graph.PNG)   |
-| ![Run5](./images/parameters-pics/Run5.PNG)|0.452491196268|![Run5](./images/parameters-pics/Run5-Graph.PNG)   |
-| ![Run6](./images/parameters-pics/Run6.PNG)|0.445390044056|![Run6](./images/parameters-pics/Run6-Graph.PNG)   |
-| ![Run7](./images/parameters-pics/Run7.PNG)|0.448221139202|![Run7](./images/parameters-pics/Run7-Graph.PNG)   |
-| ![Run8](./images/parameters-pics/Run8.PNG)|0.423943902236|![Run8](./images/parameters-pics/Run8-Graph.PNG)   |
-| ![Run9](./images/parameters-pics/Run9.PNG)|0.426341463401|![Run9](./images/parameters-pics/Run9-Graph.PNG)   |
+| ![Run1](./images/parameters-pics/Run1.PNG)|0.30291113035|![Run1](./images/parameters-pics/Run1-Graph.png)   |
+| ![Run2](./images/parameters-pics/Run2.PNG)|0.352162249037|![Run2](./images/parameters-pics/Run2-Graph.png)   |
+| ![Run3](./images/parameters-pics/Run3.PNG)|0.441323278424|![Run3](./images/parameters-pics/Run3-Graph.png)   |
+| ![Run4](./images/parameters-pics/Run4.PNG)|0.419950640633|![Run4](./images/parameters-pics/Run4-Graph.png)   |
+| ![Run5](./images/parameters-pics/Run5.PNG)|0.452491196268|![Run5](./images/parameters-pics/Run5-Graph.png)   |
+| ![Run6](./images/parameters-pics/Run6.PNG)|0.445390044056|![Run6](./images/parameters-pics/Run6-Graph.png)   |
+| ![Run7](./images/parameters-pics/Run7.PNG)|0.448221139202|![Run7](./images/parameters-pics/Run7-Graph.png)   |
+| ![Run8](./images/parameters-pics/Run8.PNG)|0.423943902236|![Run8](./images/parameters-pics/Run8-Graph.png)   |
+| ![Run9](./images/parameters-pics/Run9.PNG)|0.426341463401|![Run9](./images/parameters-pics/Run9-Graph.png)   |
 
 
 ## Prediction ##
