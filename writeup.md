@@ -196,6 +196,13 @@ Trained the model in the AWS Udacity's AMI instance with provided data from udac
 * workers: maximum number of processes to spin up.
 
 Arrived the required final score for the model with the following values for the HyperParameters based on the pervious exercises and trails in this model.
+
+Started trianing the model with a learning rate of 0.05, batch size of 20, number of epoch of 10, steps per epoch 100 and validation steps of 20 got a score of 0.30 and then increased batch size to 40, saw increase in score to 0.35, then decreased the learning rate to 0.005 and increased number of epochs to 20, there is an increase of score to 0.41, then increased the batch size to 64 and steps per epoch at 400, there is slight increase in the score to 0.42 and then increased the validation steps to 50, saw slight incresae in the score to 0.43
+
+As per the project requirement I took the this final score of 0.43.
+
+On overall, i see there is a significant change in the score when the number of epochs increased to 20 and reduced the learning rate to 0.005
+
 ```
 learning_rate = 0.005
 batch_size = 64
@@ -217,7 +224,7 @@ Below is the Training curves images:
 | ![Run2](./images/parameters-pics/Run2.PNG)|0.352162249037|![Run2](./images/parameters-pics/Run2-Graph.png)   |
 | ![Run3](./images/parameters-pics/Run3.PNG)|0.419950640633|![Run3](./images/parameters-pics/Run3-Graph.png)   |
 | ![Run4](./images/parameters-pics/Run4.PNG)|0.423943902236|![Run4](./images/parameters-pics/Run4-Graph.png)   |
-| ![Run5](./images/parameters-pics/Run5.PNG)|0.426341463401|![Run5](./images/parameters-pics/Run5-Graph.png)   |
+| ![Run5](./images/parameters-pics/Run5.PNG)|0.437020779175|![Run5](./images/parameters-pics/Run5-Graph.png)   |
 
 
 ## Prediction ##
