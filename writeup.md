@@ -161,7 +161,7 @@ This is done to extract some more spatial information from prior layers and impl
 ### FCN Model ###
 *Fully Convolution Layer*
 This consists of three techniques:
-1) Replace Fully Connected Layers with 1 x 1 Convolution Layer
+1) Replace Fully Connected Layers with 1 x 1 Convolution Layer ( to get the spatial information - location of the pixels).
 2) UpSampling the output to the same size of the Image.
 3) Skip connections to retain some of the finer details from the pervious layers.
 
@@ -217,6 +217,8 @@ Below is the Training curves images:
 | ------------- |:-------------:|
 | ![epoch2](./images/graph-epoch-2.PNG) | ![epoch20](./images/graph-epoch-20.PNG) |
 
+
+**Trails**
 
 |HyerPer Parameters   | Final Score   |Training Curve at Epoch -20   |
 |---|---|---|
